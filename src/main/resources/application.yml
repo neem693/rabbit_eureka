@@ -1,0 +1,13 @@
+server:
+  port: 8762 # 유레카 서버가 실행될 포트를 설정합니다.
+
+spring:
+  application:
+    name: eureka-server # 유레카 서버의 애플리케이션 이름을 설정합니다.
+
+eureka:
+  client:
+    registerWithEureka: false # 유레카 서버 자체가 다른 유레카 서버에 등록되지 않도록 설정합니다.
+    fetchRegistry: false # 유레카 서버가 다른 유레카 서버로부터 레지스트리 정보를 가져오지 않도록 설정합니다.
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
